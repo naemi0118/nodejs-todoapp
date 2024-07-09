@@ -15,7 +15,10 @@ app.use("/api/v1/tasks", router);
 const start = async () => {
   try {
     await connectDB(process.env.MONGODB_URL); // envファイルに格納したDBのURLを呼び出す変数
-    app.listen(PORT, console.log("サーバーが起動しました！"));
+    app.listen(
+      process.env.PORT || PORT,
+      console.log("サーバーが起動しました！")
+    );
   } catch (err) {
     console.log(err);
   }
