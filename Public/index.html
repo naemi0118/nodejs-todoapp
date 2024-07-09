@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node.jsとMongoDBを使ったTodoアプリ</title>
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- style css -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="task-form-area">
+      <form class="task-form">
+        <h4>Node.jsでTODOアプリ</h4>
+        <div class="form-control">
+          <input
+            type="text"
+            name=""
+            class="task-input"
+            placeholder="例:Node.jsの勉強"
+          />
+          <button type="submit" class="task-button">送信</button>
+        </div>
+        <div class="form-alert"></div>
+      </form>
+    </div>
+
+    <section class="tasks-container">
+      <p class="loading-text">読み込み中・・・</p>
+      <div class="tasks"></div>
+    </section>
+
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- javascript -->
+    <script src="./script.js"></script>
+  </body>
+</html>

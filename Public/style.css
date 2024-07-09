@@ -1,0 +1,292 @@
+/* 共通 */
+
+:root {
+  /* 色 */
+  --default: #111;
+  --white: #fff;
+  --light-pink: rgb(253, 233, 236);
+  --blown: #815123;
+  --cream: #ffe341;
+  --orange: rgb(225, 190, 172);
+  --gray: #eeeeee;
+  --blue: #15b8fe;
+  --red: #b71010;
+  --green-dark: #028723;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--default);
+  background-color: var(--light-pink);
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+/* フォーム */
+
+h4 {
+  color: var(--blown);
+  font-weight: bold;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin-top: 80px;
+}
+
+.task-form,
+.single-task-form {
+  display: block;
+  margin: 0 auto;
+  padding-top: 64px;
+  width: 80%;
+  height: 360px;
+  background-color: var(--white);
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.task-form-area,
+.single-task-form {
+  margin-top: 100px;
+}
+
+h4 {
+  font-size: 28px;
+}
+
+.task-input {
+  padding: 2px;
+  width: 60%;
+  border: 2px solid #815123;
+}
+
+.task-edit-name {
+  padding: 2px;
+  width: 100%;
+  border: 2px solid #815123;
+}
+
+::placeholder {
+  color: var(--orange);
+}
+
+.task-button {
+  cursor: pointer;
+  margin-top: 40px;
+  padding: 5px 30px;
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  background-color: var(--cream);
+}
+
+button:hover {
+  color: var(--default);
+  background-color: var(--gray);
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* タスク */
+
+.tasks-container {
+  width: 100%;
+  width: 100vw;
+  margin: 0 auto;
+  margin-top: 1.2rem;
+  padding-bottom: 4rem;
+}
+
+.tasks {
+  display: grid;
+  gap: 1rem;
+}
+
+.single-task {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  background-color: var(--white);
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.single-task:hover {
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.single-task-area {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+}
+
+.loading-text {
+  visibility: hidden;
+}
+
+h5 {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+span {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 1.5rem;
+}
+
+.fa-check-circle {
+  font-size: 1rem;
+  color: rgb(3, 163, 99);
+  visibility: hidden;
+}
+
+.fa-edit {
+  margin-right: 8px;
+  color: var(--blue);
+}
+
+.fa-trash {
+  color: var(--red);
+}
+
+.edit-link {
+  cursor: pointer;
+  background-color: transparent;
+  border: transparent;
+}
+
+.device-button {
+  cursor: pointer;
+  background-color: transparent;
+  border: transparent;
+}
+
+.device-button:hover {
+  background-color: transparent;
+}
+
+.device-button:focus {
+  outline: none;
+}
+
+/* タスク完了・編集 */
+
+.task-edit-completed {
+  width: auto;
+}
+
+.single-task-form .form-alert {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.single-task-form h4 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.single-task-form p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.edit-form-area {
+  position: absolute;
+  width: 60%;
+  top: 32%;
+  left: 20%;
+}
+
+.single-task-form .form-control {
+  margin-top: 16px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  align-items: center;
+  justify-items: start;
+  gap: 0 1rem;
+}
+
+.btn-container {
+  margin-top: 188px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2rem;
+}
+
+.back-link {
+  flex: none;
+  color: chocolate;
+  display: block;
+  text-decoration: none;
+  /* リンクの下線を消すcss */
+}
+
+.back-link:hover {
+  opacity: 0.75;
+}
+
+/* 追加 */
+.empty-list {
+  font-weight: bold;
+}
+
+.form-alert {
+  color: var(--red);
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  position: absolute;
+  top: 250px;
+  left: 8px;
+}
+
+.text-success {
+  color: var(--green-dark);
+  position: absolute;
+  width: 60%;
+  top: 67%;
+  left: 20%;
+}
+
+.task-edit-btn {
+  flex: none;
+  cursor: pointer;
+  padding: 4px 12px;
+  color: var(--blown);
+  font-weight: bold;
+  background-color: #ffeabd;
+  border: 2px solid #fbdb97;
+}
+
+.task-completed h5 {
+  text-decoration: line-through;
+  /* 取り消し線 */
+}
+
+.fa-check-circled {
+  visibility: visible;
+}
