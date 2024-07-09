@@ -14,7 +14,7 @@ app.use("/api/v1/tasks", router);
 // データベースと接続
 const start = async () => {
   try {
-    await connectDB(process.env.MONGODB_HEROKU_URL || process.env.MONGODB_URL); // envファイルに格納したDBのURLを呼び出す変数
+    await connectDB(process.env.MONGODB_HEROKU_URL); // envファイルに格納したDBのURLを呼び出す変数
     app.listen(
       process.env.PORT || PORT,
       console.log("サーバーが起動しました！")
